@@ -1,5 +1,9 @@
 require('dotenv').config()
 
+// Changing default timeout
+// may cause unexpected errors
+const defaultTimeout = 60000
+
 exports.config = {
   automationProtocol: 'devtools',
   runner: 'local',
@@ -23,14 +27,14 @@ exports.config = {
   ],
   logLevel: process.env.LOG_LEVEL || 'info',
   baseUrl: process.env.BASE_URL || 'http://qa-test.data-playground-1.ivxs.uk/',
-  waitforTimeout: 60000,
-  connectionRetryTimeout: 60000,
+  waitforTimeout: defaultTimeout,
+  connectionRetryTimeout: defaultTimeout,
   connectionRetryCount: 3,
   services: [],
   framework: 'jasmine',
   reporters: ['spec'],
   jasmineNodeOpts: {
-    defaultTimeoutInterval: 60000,
+    defaultTimeoutInterval: defaultTimeout,
     helpers: [require.resolve('@babel/register')]
   },
 
