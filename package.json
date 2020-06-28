@@ -1,0 +1,45 @@
+{
+  "name": "comply-qa-tech-test",
+  "version": "0.0.1",
+  "description": "Web solution by Mauricio Valenti Giacomello",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn wdio wdio.conf.js",
+    "lint": "yarn eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvgiacomello/comply-qa-tech-test.git"
+  },
+  "keywords": [
+    "test",
+    "webdriver",
+    "wdiov6"
+  ],
+  "author": "@mvgiacomello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvgiacomello/comply-qa-tech-test/issues"
+  },
+  "homepage": "https://github.com/mvgiacomello/comply-qa-tech-test#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/register": "^7.10.3",
+    "@wdio/cli": "^6.1.22",
+    "@wdio/jasmine-framework": "^6.1.17",
+    "@wdio/local-runner": "^6.1.22",
+    "@wdio/logger": "^6.0.16",
+    "@wdio/spec-reporter": "^6.1.14",
+    "@wdio/sync": "^6.1.14",
+    "babel-eslint": "^10.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "puppeteer": "^4.0.1"
+  }
+}

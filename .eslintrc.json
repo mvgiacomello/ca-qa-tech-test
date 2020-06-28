@@ -1,0 +1,13 @@
+{
+  "extends": "standard",
+  "parser": "babel-eslint",
+  "globals": {
+    // Webdriver.IO globals
+    "$": true,
+    "$$": true,
+    "browser": true
+  },
+  "env": {
+    "jasmine": true
+  }
+}
