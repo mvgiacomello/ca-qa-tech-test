@@ -20,7 +20,7 @@ exports.config = {
         args: [
           '--no-sandbox',
           '--disable-dev-shm-usage',
-          ...(process.env.HEADLESS === 'true' ? ['--headless'] : [])
+          ...(process.env.HEADLESS === 'false' ? [] : ['--headless'])
         ]
       }
     }
