@@ -1,4 +1,4 @@
-import newEntityPage from '../pages/newEntity'
+import newEntityPage from '../objects/newEntity'
 
 describe('Entity Creation', () => {
   it('Smoke Test', () => {
