@@ -4,7 +4,7 @@ import { retrieveAll, retrieveLatestEntryByDate } from '../extensions/apiDataRet
 
 describe('Entity Creation', () => {
   beforeEach(() => {
-    // newEntityPage.open()
+    newEntityPage.open()
   })
 
   it('Front-end is up @Smoke', () => {
