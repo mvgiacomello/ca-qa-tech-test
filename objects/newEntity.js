@@ -15,6 +15,34 @@ class NewEntity {
     return $('h2')
   }
 
+  get fullName () {
+    return $('#fullName')
+  }
+
+  get country () {
+    return $('#country')
+  }
+
+  get yob () {
+    return $('[name="yob"]')
+  }
+
+  get position () {
+    return $('#position')
+  }
+
+  get sourceUrl () {
+    return $('#url')
+  }
+
+  get risk () {
+    return $('#risk')
+  }
+
+  get save () {
+    return $('button*=Save')
+  }
+
   open () {
     browser.url(this.path)
   }
