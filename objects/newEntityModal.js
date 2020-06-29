@@ -15,6 +15,10 @@ class NewEntityModal {
     return this.modal.isExisting()
   }
 
+  isDisplayed () {
+    return this.modal.isDisplayed()
+  }
+
   waitForDisplayed () {
     this.modal.waitForDisplayed()
   }

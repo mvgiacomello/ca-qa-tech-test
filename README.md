@@ -22,6 +22,8 @@ Execute command: `yarn test`
 
 You can run only the smoke tests with `TEST_TYPE=SMOKE yarn test`
 
+You can tag a single (or multiple) tests with `@Now` and run `TEST_TYPE=NOW yarn test`
+
 ## Linting
 
 Execute command: `yarn lint`

@@ -36,7 +36,9 @@ exports.config = {
   jasmineNodeOpts: {
     defaultTimeoutInterval: defaultTimeout,
     helpers: [require.resolve('@babel/register')],
-    grep: process.env.TEST_TYPE === 'SMOKE' ? '@Smoke' : null
+    grep: process.env.TEST_TYPE === 'SMOKE' ? '@Smoke'
+      : process.env.TEST_TYPE === 'NOW' ? '@Now'
+        : null
   },
 
   beforeTest: () => {
