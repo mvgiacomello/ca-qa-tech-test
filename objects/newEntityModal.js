@@ -11,10 +11,16 @@ class NewEntityModal {
     return $('button*=Back')
   }
 
-  isPresent () {
-    return (
-      this.modal.isPresent()
-    )
+  isExisting () {
+    return this.modal.isExisting()
+  }
+
+  waitForDisplayed () {
+    this.modal.waitForDisplayed()
+  }
+
+  waitForNotDisplayed () {
+    this.modal.waitForDisplayed({ reverse: true })
   }
 
   modalText () {

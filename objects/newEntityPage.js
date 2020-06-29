@@ -15,7 +15,7 @@ class NewEntity {
     return $('h2')
   }
 
-  get fullName () {
+  get name () {
     return $('#fullName')
   }
 
@@ -31,7 +31,7 @@ class NewEntity {
     return $('#position')
   }
 
-  get sourceUrl () {
+  get url () {
     return $('#url')
   }
 
@@ -48,13 +48,39 @@ class NewEntity {
   }
 
   isLoaded () {
-    return (
-      this.formTitle.waitForDisplayed() && this.formTitle.waitForDisplayed()
-    )
+    return this.formTitle.waitForDisplayed() && this.formTitle.waitForDisplayed()
   }
 
   showsFormTitle () {
     return this.formTitle.getText().includes(this.formTitleText)
+  }
+
+  withName (name) {
+    this.name.setValue(name)
+  }
+
+  withCountry (country) {
+    this.country.setValue(country)
+  }
+
+  withYob (yob) {
+    this.yob.setValue(yob)
+  }
+
+  withPosition (position) {
+    this.position.setValue(position)
+  }
+
+  withUrl (url) {
+    this.url.setValue(url)
+  }
+
+  withRisk (risk) {
+    this.risk.setValue(risk)
+  }
+
+  submit () {
+    this.save.click()
   }
 }
 

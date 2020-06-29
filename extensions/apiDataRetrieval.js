@@ -15,3 +15,11 @@ export function retrieveId (id) {
       .catch(error => console.log('Unable to retrieve all entries', error))
   })
 }
+
+export function retrieveLatestEntryByDate () {
+  return retrieveAll()
+    .sort((a, b) => {
+      return new Date(a.createdAt).valueOf() - new Date(b.createdAt).valueOf()
+    })
+    .pop()
+}
