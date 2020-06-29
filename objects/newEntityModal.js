@@ -26,6 +26,11 @@ class NewEntityModal {
   modalText () {
     return this.text.getText()
   }
+
+  dismiss () {
+    this.back.click()
+    this.waitForNotDisplayed()
+  }
 }
 
 export default new NewEntityModal()

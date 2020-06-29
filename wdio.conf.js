@@ -7,11 +7,10 @@ const defaultTimeout = 60000
 exports.config = {
   automationProtocol: 'devtools',
   runner: 'local',
-  specs: ['./specs/**.test.js'],
+  specs: ['./specs/**/*.test.js'],
   maxInstances: 1,
   capabilities: [
     {
-      // Using most popular browser rendenring engine:
       // w3schools.com/browsers/browsers_chrome.asp
       browserName: 'chromium',
       maxInstances: 1,
@@ -20,6 +19,7 @@ exports.config = {
         args: [
           '--no-sandbox',
           '--disable-dev-shm-usage',
+          '--ignore-certificate-errors',
           ...(process.env.HEADLESS === 'false' ? [] : ['--headless'])
         ]
       }
@@ -40,7 +40,6 @@ exports.config = {
 
   beforeTest: () => {
     browser.deleteAllCookies()
-    // Using most popular resolution:
     // w3schools.com/browsers/browsers_display.asp
     browser.setWindowSize(1366, 768)
   }

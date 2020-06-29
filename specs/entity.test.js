@@ -2,6 +2,7 @@ import newEntityPage from '../objects/newEntityPage'
 import newEntityModal from '../objects/newEntityModal'
 import { retrieveAll, retrieveLatestEntryByDate } from '../extensions/apiDataRetrieval'
 
+// Some valid example values
 const exampleName = 'Mauricio Giacomello'
 const exampleCountry = 'Italy'
 const exampleYob = '22/09/1989'

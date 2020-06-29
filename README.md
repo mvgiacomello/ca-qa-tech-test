@@ -30,6 +30,10 @@ You can either rename the file `.env.example` to `.env` and modify the variables
 
 Check `.env.example` for possible configurations.
 
+## Reports
+
+The test results are output in console. Any supported reports can be hooked into this framework. Such as [jUnit Reported](https://webdriver.io/docs/junit-reporter.html), [Allure reported](https://webdriver.io/docs/allure-reporter.html), [html reporter](https://webdriver.io/docs/rpii-wdio-html-reporter.html) and many others. The selection of the best one depends on the CI integration, so we're using only the [Spec reporter](https://webdriver.io/docs/spec-reporter.html) for now.
+
 ## Test Architecture
 
 1. Code runs through babel, so latest javascript standards is supported
@@ -40,3 +44,6 @@ Check `.env.example` for possible configurations.
 1. There's an extension folder, currently only holder one extension to retrieve data from the system's API
 1. Tests are written with Jasmine framework which has a similar syntax to Jest. For more Jasmine trick, [visit this page](https://devhints.io/jasmine)
 1. We devide each test in 3 sections: "Arrange", "Act", "Assert" (the 3 As of testing)
+1. Parallel execution can be configured in the `wdio.conf.js` in the `maxInstances` parameter
+1. By default, using most popular combination of browser rendering engine and browser window resolution (chromium @ 1366px by 768px)
+1. Test results are logged on the console for now. Check reports section above
