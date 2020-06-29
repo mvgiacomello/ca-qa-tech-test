@@ -20,6 +20,8 @@ Trouble-shooting: in case you receive an error from puppeteer's installation scr
 
 Execute command: `yarn test`
 
+You can run only the smoke tests with `TEST_TYPE=SMOKE yarn test`
+
 ## Linting
 
 Execute command: `yarn lint`
@@ -47,3 +49,4 @@ The test results are output in console. Any supported reports can be hooked into
 1. Parallel execution can be configured in the `wdio.conf.js` in the `maxInstances` parameter
 1. By default, using most popular combination of browser rendering engine and browser window resolution (chromium @ 1366px by 768px)
 1. Test results are logged on the console for now. Check reports section above
+1. Smoke tests are tagged with `@Smoke` at the end of each test title

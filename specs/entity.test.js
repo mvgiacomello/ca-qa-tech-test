@@ -30,7 +30,7 @@ describe('Entity Creation', () => {
     expect(retrieveAll()).toBeDefined()
   })
 
-  it('Creates an entity - Happy path', () => {
+  it('Creates an entity - Happy path @Smoke', () => {
     // Arrange
     // Act
     newEntityPage.withName(exampleName)
