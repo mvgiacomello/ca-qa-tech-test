@@ -2,6 +2,14 @@ import newEntityPage from '../objects/newEntityPage'
 import newEntityModal from '../objects/newEntityModal'
 import { retrieveAll, retrieveLatestEntryByDate } from '../extensions/apiDataRetrieval'
 
+const exampleName = 'Mauricio Giacomello'
+const exampleCountry = 'Italy'
+const exampleYob = '22/09/1989'
+const examplePosition = 'Tech Lead'
+const exampleUrl = 'http://giacomello.me'
+const exampleRiskText = 'Low'
+const exampleRiskNumber = 1
+
 describe('Entity Creation', () => {
   beforeEach(() => {
     newEntityPage.open()
@@ -23,36 +31,28 @@ describe('Entity Creation', () => {
 
   it('Creates an entity - Happy path', () => {
     // Arrange
-    const name = 'Mauricio Giacomello'
-    const country = 'England'
-    const yob = '22/09/1989'
-    const position = 'Tester'
-    const url = 'http://giacomello.me'
-    const riskText = 'Medium'
-    const riskNumber = 2
-
     // Act
-    newEntityPage.withName(name)
-    newEntityPage.withCountry(country)
-    newEntityPage.withYob(yob)
-    newEntityPage.withPosition(position)
-    newEntityPage.withUrl(url)
-    newEntityPage.withRisk(riskText)
+    newEntityPage.withName(exampleName)
+    newEntityPage.withCountry(exampleCountry)
+    newEntityPage.withYob(exampleYob)
+    newEntityPage.withPosition(examplePosition)
+    newEntityPage.withUrl(exampleUrl)
+    newEntityPage.withRisk(exampleRiskText)
 
     newEntityPage.submit()
     newEntityModal.waitForDisplayed()
 
     // Assert - UI
     expect(newEntityModal.isExisting()).toBe(true)
-    expect(newEntityModal.modalText()).toContain(name)
+    expect(newEntityModal.modalText()).toContain(exampleName)
 
     // Assert - API
     const lastAddedFromAPI = retrieveLatestEntryByDate()
-    expect(lastAddedFromAPI.name).toBe(name)
-    expect(lastAddedFromAPI.country).toBe(country)
-    expect(lastAddedFromAPI.yob).toBe(yob)
-    expect(lastAddedFromAPI.position).toBe(position)
-    // Not present: expect(lastAddedFromAPI.url).toBe(url)
-    expect(lastAddedFromAPI.risk).toBe(riskNumber)
+    expect(lastAddedFromAPI.name).toBe(exampleName)
+    expect(lastAddedFromAPI.country).toBe(exampleCountry)
+    expect(lastAddedFromAPI.yob).toBe(exampleYob)
+    expect(lastAddedFromAPI.position).toBe(examplePosition)
+    // Not present: expect(lastAddedFromAPI.url).toBe(exampleUrl)
+    expect(lastAddedFromAPI.risk).toBe(exampleRiskNumber)
   })
 })

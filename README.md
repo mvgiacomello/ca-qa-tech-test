@@ -6,9 +6,9 @@ For my analisys and findings of the system, [check this file](THOUGHTS.md)
 
 ## Requirements
 
-- Node 12+
-- Yarn
-- Vscode (for automatic linting)
+- [Node 12+](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
+- [Vscode](https://code.visualstudio.com/) (for automatic linting)
 
 ## Setup
 
