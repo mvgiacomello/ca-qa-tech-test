@@ -214,6 +214,7 @@ describe('Entity Creation', () => {
   it('Creates an entity with risk low', () => {
     // Arrange
     const risk = 'Low'
+    const riskInApi = 1
     newEntityPage.withName(exampleName)
     newEntityPage.withCountry(exampleCountry)
     newEntityPage.withYob(exampleYob)
@@ -227,12 +228,13 @@ describe('Entity Creation', () => {
 
     // Assert
     expect(newEntityModal.isExisting()).toBe(true)
-    expect(retrieveLatestEntryByDate().risk).toBe(risk)
+    expect(retrieveLatestEntryByDate().risk).toBe(riskInApi)
   })
 
   it('Creates an entity with risk medium', () => {
     // Arrange
     const risk = 'Medium'
+    const riskInApi = 2
     newEntityPage.withName(exampleName)
     newEntityPage.withCountry(exampleCountry)
     newEntityPage.withYob(exampleYob)
@@ -246,12 +248,13 @@ describe('Entity Creation', () => {
 
     // Assert
     expect(newEntityModal.isExisting()).toBe(true)
-    expect(retrieveLatestEntryByDate().risk).toBe(risk)
+    expect(retrieveLatestEntryByDate().risk).toBe(riskInApi)
   })
 
   it('Creates an entity with risk high', () => {
     // Arrange
     const risk = 'High'
+    const riskInApi = 3
     newEntityPage.withName(exampleName)
     newEntityPage.withCountry(exampleCountry)
     newEntityPage.withYob(exampleYob)
@@ -265,12 +268,13 @@ describe('Entity Creation', () => {
 
     // Assert
     expect(newEntityModal.isExisting()).toBe(true)
-    expect(retrieveLatestEntryByDate().risk).toBe(risk)
+    expect(retrieveLatestEntryByDate().risk).toBe(riskInApi)
   })
 
   it('Creates an entity with risk huge', () => {
     // Arrange
     const risk = 'HUGE'
+    const riskInApi = 4
     newEntityPage.withName(exampleName)
     newEntityPage.withCountry(exampleCountry)
     newEntityPage.withYob(exampleYob)
@@ -284,7 +288,7 @@ describe('Entity Creation', () => {
 
     // Assert
     expect(newEntityModal.isExisting()).toBe(true)
-    expect(retrieveLatestEntryByDate().risk).toBe(risk)
+    expect(retrieveLatestEntryByDate().risk).toBe(riskInApi)
   })
 
   it('Confirmation modal can be dismissed', () => {

@@ -45,5 +45,6 @@ exports.config = {
     browser.deleteAllCookies()
     // w3schools.com/browsers/browsers_display.asp
     browser.setWindowSize(1366, 768)
+    browser.refresh()
   }
 }

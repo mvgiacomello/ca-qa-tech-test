@@ -1,5 +1,7 @@
 # Thoughts and Bugs found
 
+Except for a couple smoke tests, all of them fail because the front-ent is not hooked to the API.
+
 These are probably intentionally placed for interview purposes but, here they are:
 
 1. By analysing the system under test I couldn't find API calls being fired by the browser upon submitting a new entity
